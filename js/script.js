@@ -46,6 +46,7 @@ async function getProduct() {
     const results = await response.json(); 
 
     for (let i = 0; i < results.length; i++) {
+        
         menProducts.innerHTML += `
         <a href="details.html?id=${results[i].id}"><div class="product-card">
             <img src="${results[i].images[0].src}">
@@ -55,7 +56,7 @@ async function getProduct() {
         `;
     }
 
-    console.log(results[0]);
+    console.log(results);
 }
 
 getProduct();
