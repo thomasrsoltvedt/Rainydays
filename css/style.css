@@ -190,6 +190,47 @@ img {
     font-weight: 100;
 }
 
+.women-shop {
+    background: url("/img/products_women") no-repeat center center/cover;
+}
+
+.men-shop {
+    background: url("/img/products_men") no-repeat center center/cover;
+}
+
+.shop {
+    height: 400px; 
+    width: 100%; 
+    margin: 20px 0;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.shop h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 3px solid #fff;
+    padding: 10px;
+}
+
+.shop::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.5); 
+}
+
+.women-shop *, 
+.men-shop * {
+    z-index: 10;
+}
+
 /* --- DETAILS PAGE --- */
 .product-container {
     margin-top: 20px;
@@ -437,7 +478,7 @@ footer img {
 
     #breadcrumbs a,
     #breadcrumbs p {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     /* --- PRODUCTS PAGE --- */
@@ -452,10 +493,48 @@ footer img {
         column-gap: 20px;
     }
 
+    #select-shop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
     /* --- FOOTER --- */
     footer img {
         max-height: 25%;
         max-width: 25%;
+    }
+
+    /* --- HOVER STATES --- */
+    .navbar ul li a:hover {
+        border-bottom: 2px solid #faac05;
+        padding-bottom: 2px;
+    }
+
+    .cta:hover {
+        background: transparent;
+        border: 3px solid #faac05; 
+        color: #faac05;
+        transition: 0.5s;
+    }
+
+    #breadcrumbs a:hover {
+        color: #faac05;
+    }
+
+    .shop:hover h2 {
+        color: #faac05;
+        border: 3px solid #faac05;
+        transition: 0.2s;
+    }
+
+    .shop:hover::before {
+        background: rgba(0,0,0,0.7);
+        transition: 0.2s;
+    }
+
+    footer a:hover {
+        color: #faac05;
     }
 }
 
