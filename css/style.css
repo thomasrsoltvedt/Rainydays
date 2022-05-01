@@ -386,6 +386,8 @@ footer img {
 
 
 /* --- MEDIA QUERIES --- */
+
+/* MIN WIDTH: 767PX */
 @media(min-width: 767px) {
     /* --- NAVIGATION BAR --- */
     .navbar {
@@ -446,6 +448,7 @@ footer img {
     }
 }
 
+/* MIN WIDTH: 1200PX */
 @media(min-width: 1200px) {
     /* --- NAVIGATION BAR --- */
     .navbar {
@@ -499,6 +502,10 @@ footer img {
         column-gap: 20px;
     }
 
+    .shop {
+        height: 500px;
+    }
+
     /* --- FOOTER --- */
     footer img {
         max-height: 25%;
@@ -506,7 +513,7 @@ footer img {
     }
 
     /* --- HOVER STATES --- */
-    .navbar ul li a:hover {
+    .navbar ul li a:hover:not(.active) {
         border-bottom: 2px solid #faac05;
         padding-bottom: 2px;
     }
@@ -538,6 +545,7 @@ footer img {
     }
 }
 
+/* MIN WIDTH: 1500PX */
 @media(min-width: 1500px) {
     .products {
         grid-template-columns: 1fr 1fr 1fr;
@@ -548,6 +556,7 @@ footer img {
     }
 }
 
+/* MIN WIDTH: 2000PX */
 @media(min-width: 2000px) {
     /* --- ABOUT PAGE --- */
     .about {
